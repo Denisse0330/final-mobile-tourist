@@ -22,6 +22,7 @@ import "./theme/variables.css";
 import { NormalRouter } from "./routes/NormalRouter";
 import { AuthenticateProvider } from "./context/AuthContext";
 import { GeolocationProvider } from "./context/GeolocationContext";
+import { CameraProvider } from "./context/CameraContext";
 
 setupIonicReact();
 
@@ -30,13 +31,15 @@ const App: React.FC = () => {
 
   return (
     <GeolocationProvider>
-      <AuthenticateProvider>
-        <QueryClientProvider client={queryClient}>
-          <IonApp>
-            <NormalRouter />
-          </IonApp>
-        </QueryClientProvider>
-      </AuthenticateProvider>
+      <CameraProvider>
+        <AuthenticateProvider>
+          <QueryClientProvider client={queryClient}>
+            <IonApp>
+              <NormalRouter />
+            </IonApp>
+          </QueryClientProvider>
+        </AuthenticateProvider>
+      </CameraProvider>
     </GeolocationProvider>
   );
 };

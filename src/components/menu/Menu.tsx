@@ -12,6 +12,8 @@ import {
 
 import { useLocation } from "react-router-dom";
 import {
+  cameraOutline,
+  cameraSharp,
   home,
   homeOutline,
   mailOutline,
@@ -73,6 +75,13 @@ const appPages: AppPage[] = [
     url: "/favorites",
     iosIcon: starOutline,
     mdIcon: starSharp,
+    isLogin: true,
+  },
+  {
+    title: "Momentos",
+    url: "/photos",
+    iosIcon: cameraOutline,
+    mdIcon: cameraSharp,
     isLogin: true,
   },
   {

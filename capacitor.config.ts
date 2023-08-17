@@ -8,12 +8,15 @@ const config: CapacitorConfig = {
     androidScheme: "https",
   },
   plugins: {
-    Geolocalization: {
+    Geolocation: {
       backgroundPermission: "granted",
       foregroundPermission: "granted",
       alwaysAuthorization: true,
     },
     Camera: {
+      // Add the Camera plugin configuration
+      backgroundPermission: "granted",
+      foregroundPermission: "granted",
       alwaysAuthorization: true,
     },
   },

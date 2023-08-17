@@ -7,6 +7,8 @@ import { useAuthenticateContext } from "../context/AuthContext";
 import { LogoutPage } from "../pages/logout/LogoutPage";
 import { MapPages } from "../pages/map/MapPages";
 import { FavoritesPage } from "../pages/favorites/FavoritesPage";
+import { CameraListPage } from "../pages/camera/list/CameraListPage";
+import { AddMomentPage } from "../pages/camera/form/AddMomentPage";
 
 export const LoggedRoutes = () => {
   return (
@@ -23,6 +25,12 @@ export const LoggedRoutes = () => {
         </Route>
         <Route path="/favorites" exact={true}>
           <FavoritesPage />
+        </Route>
+        <Route path="/photos" exact={true}>
+          <CameraListPage />
+        </Route>
+        <Route path="/photos/add" exact={true}>
+          <AddMomentPage />
         </Route>
         <Route path="/logout" exact={true}>
           <LogoutPage />
